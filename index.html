@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaflet Map with Routing and Distance Alarm</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="interface">
+        <img src="img/interface.png" alt="">
+</div>
+    <div class="nav">
+        <div id="x">
+            <img id="gps" src="img/gps.png" alt="">
+            <h1>LetMeKnow</h1>
+        </div>
+        <div class="darkmode">
+            <label class="ui-switch">
+                <input type="checkbox" id="checkboxs">
+                <div class="slider">
+                    <div class="circle"></div>
+                </div>
+            </label>
+        </div>
+    </div>
+    <div class="rest">
+        <div id="map" style="height: 500px;"></div>
+        <div class="notification-container">
+            <div id="notification">
+                <p>You have reached within the specified distance of your destination!</p>
+                <button id="stopAlarmButton">Stop Alarm</button>
+            </div>
+        </div>
+
+        <form id="routeForm" style="margin: 10px;" class="form-container">
+            <input type="text" id="destinationPlace" placeholder="Enter Destination place" required class="custom-input" />
+            <input type="number" id="distanceInput" placeholder="Enter Alarm Distance (meters)" required class="custom-input2" />
+            <button id="B1" type="submit">Get Route</button>
+        </form>
+
+        <audio id="alarmSound" src="audio/97_wake_up_alarm.mp3" preload="auto" loop></audio>
+        <!-- 'loop' attribute added -->
+       
+    </div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <script src="script.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
