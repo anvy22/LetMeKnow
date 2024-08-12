@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }).addTo(map);
 
     var marker;
+    let count = 0;
     var destinationMarker;
     var destinationCoords;
     var alarmDistance = 0; // Distance in meters
@@ -112,7 +113,6 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log('Current Distance:', distance, 'Alarm Distance:', alarmDistance);
 
             if (distance <= alarmDistance && alarmDistance > 0) {
-                alarmSound.play(); // Play the alarm sound
                 showNotification(); // Show the custom notification
             }
         }
@@ -120,7 +120,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to show the custom notification
     function showNotification() {
+        count++;
+        if(count<2){
         notification.style.display = 'block';
+        alarmSound.play(); // Play the alarm sound
+        }
     }
 
     // Function to stop the alarm

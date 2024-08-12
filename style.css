@@ -30,7 +30,7 @@ html, body {
 #notification {
     display: none; /* Hidden by default */
     position: absolute; /* Positioned relative to .notification-container */
-    bottom: -60px; /* Position below the button; adjust as needed */
+    bottom: -10px; /* Position below the button; adjust as needed */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust for exact centering */
     padding: 20px;
@@ -338,4 +338,12 @@ body.dark-mode {
 }
 label{
   justify-content: right;
+}
+#B1, #stopAlarmButton {
+  padding: 15px 25px;
+}
+
+.slider .circle {
+  width: 35px;
+  height: 35px;
 }

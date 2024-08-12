@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Leaflet Map with Routing and Distance Alarm</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
@@ -24,13 +26,14 @@
             </label>
         </div>
     </div>
+    <div id="notification">
+        <p>You have reached within the specified distance of your destination!</p>
+        <button id="stopAlarmButton">Stop Alarm</button>
+    </div>
     <div class="rest">
         <div id="map" style="height: 500px;"></div>
         <div class="notification-container">
-            <div id="notification">
-                <p>You have reached within the specified distance of your destination!</p>
-                <button id="stopAlarmButton">Stop Alarm</button>
-            </div>
+            
         </div>
 
         <form id="routeForm" style="margin: 10px;" class="form-container">
