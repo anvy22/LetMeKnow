@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var map = L.map('map').setView([10.15255, 76.366], 11);
     var mapLink = "<a href='http://openstreetmap.org'>OpenStreetMap</a>";
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        attribution: 'Leaflet &copy; ' + mapLink + ', contribution',
+        attributionControl: false,
         maxZoom: 18
     }).addTo(map);
 
