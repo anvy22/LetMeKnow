@@ -4,20 +4,157 @@ html, body {
      
 }
 
-.interface {
-    position: relative; /* Set up positioning context */
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    overflow: hidden; /* Hide overflow */
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevents scroll bars */
 }
 
-.interface img {
-    position: absolute; /* Position the image absolutely within its container */
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
-    width: 100%; /* Make the image fill the width of the container */
-    height: 100%; /* Make the image fill the height of the container */
-    object-fit: cover; /* Scale the image to cover the container, preserving aspect ratio */
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(-45deg, #0072ff 0%, #00c6ff 100%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3vw;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  
+}
+#para{
+  font-size: 55%;
+  
+}
+#let{
+  height: 0;
+}
+
+/* From Uiverse.io by Tsiangana */ 
+.dot-spinner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  --uib-speed: 0.9s;
+  height: 2.8rem;
+  width: 2.8rem;
+  /*animation: float 3s linear infinite;*/
+}
+
+@keyframes float {
+  0% {
+    transform: rotate(0deg) translate(100px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translate(100px) rotate(-360deg);
+  }
+}
+
+.dot-spinner__dot::before {
+  content: '';
+  height: 20%;
+  width: 20%;
+  border-radius: 50%;
+  background-color: #fff;
+  filter: drop-shadow(0 0 10px rgb(95, 150, 202));
+  box-shadow: -6px -6px 11px #c1c1c1,
+             6px 6px 11px #ffffff;
+  transform: scale(0);
+  opacity: 0.5;
+  animation: pulse0112 calc(var(--uib-speed) * 1.111) ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(18, 31, 53, 0.3);
+}
+
+.dot-spinner__dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+}
+
+.dot-spinner__dot:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.dot-spinner__dot:nth-child(2)::before {
+  animation-delay: calc(var(--uib-speed) * -0.875);
+}
+
+.dot-spinner__dot:nth-child(3) {
+  transform: rotate(90deg);
+}
+
+.dot-spinner__dot:nth-child(3)::before {
+  animation-delay: calc(var(--uib-speed) * -0.75);
+}
+
+.dot-spinner__dot:nth-child(4) {
+  transform: rotate(135deg);
+}
+
+.dot-spinner__dot:nth-child(4)::before {
+  animation-delay: calc(var(--uib-speed) * -0.625);
+}
+
+.dot-spinner__dot:nth-child(5) {
+  transform: rotate(180deg);
+}
+
+.dot-spinner__dot:nth-child(5)::before {
+  animation-delay: calc(var(--uib-speed) * -0.5);
+}
+
+.dot-spinner__dot:nth-child(6) {
+  transform: rotate(225deg);
+}
+
+.dot-spinner__dot:nth-child(6)::before {
+  animation-delay: calc(var(--uib-speed) * -0.375);
+}
+
+.dot-spinner__dot:nth-child(7) {
+  transform: rotate(270deg);
+}
+
+.dot-spinner__dot:nth-child(7)::before {
+  animation-delay: calc(var(--uib-speed) * -0.25);
+}
+
+.dot-spinner__dot:nth-child(8) {
+  transform: rotate(315deg);
+}
+
+.dot-spinner__dot:nth-child(8)::before {
+  animation-delay: calc(var(--uib-speed) * -0.125);
+}
+
+@keyframes pulse0112 {
+  0%,
+  100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+let{
+  filter: drop-shadow(0 0 10px rgb(95, 150, 202));
+  box-shadow: -6px -6px 11px #c1c1c1,
+             6px 6px 11px #ffffff;
 }
 
 /* Style for custom notification */
@@ -44,8 +181,10 @@ html, body {
 }
 
 #map{
-    border-radius: 0.5rem;
+    height:60vh;
+    width: 100vw;
 }
+
 body{
     background-color: 
     #e8e8e8;
@@ -102,7 +241,7 @@ body.dark-mode {
    /* destination palce */
    /* From Uiverse.io by BurgiSimon */ 
 .custom-input {
-    max-width: 190px;
+    max-width: 100vw;
     background-color: #121212;
     border: 0px solid;
     box-shadow: 1px 1px 1px 1px rgb(131, 133, 129),
@@ -135,7 +274,7 @@ body.dark-mode {
   }
 /* Distance input1 */
 .custom-input2 {
-    max-width: 190px;
+    max-width: 100vw;
     background-color: #121212;
     border: 0px solid;
     box-shadow: 1px 1px 1px 1px rgb(131, 133, 129),
@@ -230,7 +369,7 @@ body.dark-mode {
     filter: brightness(.8);
    }
    .nav{
-    background-color: #004080;
+    background-color: #0072ff;
     color: #e8e8e8 ;
     display: flex;
     justify-content: space-between;
@@ -346,4 +485,8 @@ label{
 .slider .circle {
   width: 35px;
   height: 35px;
+}
+.rest{
+  width:100vw;
+  height: 40vw;
 }

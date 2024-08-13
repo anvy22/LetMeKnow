@@ -9,9 +9,24 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="interface">
-        <img src="img/interface.png" alt="">
+    <div class="container">
+		<h1 id="let">LetMeKnow</h1>
+		<p id="para">never miss your destination</p>
+		
+
+<div class="dot-spinner">
+    <div class="dot-spinner__dot"></div>
+    <div class="dot-spinner__dot"></div>
+    <div class="dot-spinner__dot"></div>
+    <div class="dot-spinner__dot"></div>
+    <div class="dot-spinner__dot"></div>
+    <div class="dot-spinner__dot"></div>
+    <div class="dot-spinner__dot"></div>
+    <div class="dot-spinner__dot"></div>
 </div>
+       
+   
+	</div>
     <div class="nav">
         <div id="x">
             <img id="gps" src="img/gps.png" alt="">
@@ -31,7 +46,7 @@
         <button id="stopAlarmButton">Stop Alarm</button>
     </div>
     <div class="rest">
-        <div id="map" style="height: 500px;"></div>
+        <div id="map" ></div>
         <div class="notification-container">
             
         </div>
@@ -43,7 +58,7 @@
         </form>
 
         <audio id="alarmSound" src="audio/97_wake_up_alarm.mp3" preload="auto" loop></audio>
-        <!-- 'loop' attribute added -->
+        
        
     </div>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
